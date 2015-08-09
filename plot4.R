@@ -56,7 +56,7 @@ plot(DateTime, sm1, xlab="", ylab="Energy sub metering", type="l", col="black")
 lines(DateTime, sm2, type="l", col="red")
 lines(DateTime, sm3, type="l", col="blue")
 legend("topright", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-       col=c("black", "red", "blue"), lty="solid")
+       col=c("black", "red", "blue"), lty="solid", bty="n")
 
 
 plot(DateTime, GRP, xlab="datetime", ylab="Global_reactive_power", type="l")
