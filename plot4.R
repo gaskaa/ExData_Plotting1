@@ -48,7 +48,7 @@ GRP<-as.numeric(dataSubset$Global_reactive_power)
 png("plot4.png", width=480, height=480, units="px")
 par(mfrow=c(2,2))
 
-plot(DateTime, GAP, xlab="", ylab="Global Active Power (kilowatts)", type="l")
+plot(DateTime, GAP, xlab="", ylab="Global Active Power", type="l")
 
 plot(DateTime, voltage, xlab="datetime", ylab="Voltage", type="l")
 

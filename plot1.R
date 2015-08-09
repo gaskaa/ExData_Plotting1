@@ -21,10 +21,13 @@ data <- read.table("household_power_consumption.txt", header=TRUE, sep=";",
                    stringsAsFactors=FALSE, na.strings="?")
 
 #Create a subset of the data, selecting only dates equal to Feb. 1st and 2nd in 2007
-dataSubset<-filter(data, Date=="2/1/2007" | Date=="2/2/2007")
+dataSubset<-filter(data, Date=="1/2/2007" | Date=="2/2/2007")
+
+#Select the global active power from the subset to use in the plot
+GAP<-as.numeric(dataSubset$Global_active_power)
 
 #Create a histogram of global active power and save to a png file
 png("plot1.png", width=480, height=480, units="px")
-hist(dataSubset$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="red")
+hist(GAP, main="Global Active Power", xlab="Global Active Power (kilowatts)", 
+     ylab="Frequency", col="red")
 dev.off()
